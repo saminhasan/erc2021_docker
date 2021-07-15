@@ -1,0 +1,15 @@
+<launch>
+	<arg name="cam_image_topic" default="/zed2/left_raw/image_raw_color" />
+	<arg name="cam_info_topic" default="/zed2/left_raw/camera_info" />
+    
+	<node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
+		<rosparam command="load" file="$(find leo_nav)/config/alvar.yaml" />
+		<remap from="camera_image"  to="$(arg cam_image_topic)" />
+		<remap from="camera_info"   to="$(arg cam_info_topic)" />
+	</node>
+	<arg name="tag_poses_file_name" default="artag_poses.yaml" doc="Specify a yaml param file, e.g.: tag_poses.yaml"/>
+
+	<node pkg="leo_nav" type="static_transform_broadcaster.py" name="tf_world2tag_broadcaster" output="screen">
+	<param name="tag_poses_param_path" value="$(find leo_nav)/config/$(arg tag_poses_file_name)"/>
+	</node>
+</launch>

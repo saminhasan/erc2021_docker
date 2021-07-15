@@ -1,0 +1,5 @@
+<launch> 
+  <include file="$(find leo_nav)/launch/odometry.launch" />
+  <include file="$(find leo_nav)/launch/vslam.launch" />
+  <include file="$(find leo_nav)/launch/leo_move_base.launch" />
+</launch>
