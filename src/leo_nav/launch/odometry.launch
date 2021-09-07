@@ -1,11 +1,12 @@
+<!--tis a launch file-->
 <launch>
-<node name="odom_msg" pkg="leo_nav" type="odom_msg.py">
-<rosparam command="load" file="$(find leo_nav)/config/message_filter.yaml"/>
-</node>
-<node name="pose_msg" pkg="leo_nav" type="pose_msg.py">
-<rosparam command="load" file="$(find leo_nav)/config/message_filter.yaml"/>
-</node>
-<node name="ekf_localization_node" pkg="robot_localization" type="ekf_localization_node" clear_params="true">
-<rosparam command="load" file="$(find leo_nav)/config/ekf_localization_node/ekf_3d.yaml"/>
-</node>
+	<node name="odom_msg" pkg="leo_nav" type="odom_msg.py">
+		<rosparam command="load" file="$(find leo_nav)/config/message_filter.yaml"/>
+	</node>
+	<node name="pose_msg" pkg="leo_nav" type="pose_msg.py">
+		<rosparam command="load" file="$(find leo_nav)/config/message_filter.yaml"/>
+	</node>
+	<node name="ekf_localization_node" pkg="robot_localization" type="ekf_localization_node" clear_params="true">
+		<rosparam command="load" file="$(find leo_nav)/config/ekf_localization_node/ekf_3d.yaml"/>
+	</node>
 </launch>

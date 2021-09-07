@@ -13,26 +13,26 @@ TrajectoryPlannerROS:
   holonomic_robot: false
 
   # Goal tolerance
-  yaw_goal_tolerance: 0.1
-  xy_goal_tolerance: 0.2
+  yaw_goal_tolerance: 0.4
+  xy_goal_tolerance: 0.4
   latch_xy_goal_tolerance: true
 
   # Forward simulation
   sim_time: 3.0
   sim_granularity: 0.05
-  angular_sim_granularity: 0.025
-  vx_samples: 3
-  vtheta_samples: 20
+  angular_sim_granularity: 0.02
+  vx_samples: 50
+  vtheta_samples: 50
 
   # Trajectory scoring
   meter_scoring: true
-  path_distance_bias: 0.5
-  goal_distance_bias: 0.3
+  path_distance_bias: 1.0
+  goal_distance_bias: 0.2
   occdist_scale: 0.005
   heading_lookahead: 0.325
   heading_scoring: false
   heading_scoring_timestep: 0.8
-  dwa: true
+  dwa: false
   publish_cost_grid_pc: false
   global_frame_id: map
 

@@ -1,5 +1,12 @@
+<!--tis a launch file-->
+
 <launch> 
-  <include file="$(find leo_nav)/launch/odometry.launch" />
-  <include file="$(find leo_nav)/launch/vslam.launch" />
-  <include file="$(find leo_nav)/launch/leo_move_base.launch" />
+	<include file="$(find leo_nav)/launch/odometry.launch" />
+	<include file="$(find leo_nav)/launch/vslam.launch" />
+	<include file="$(find leo_nav)/launch/artag_track.launch" />
+	<include file="$(find leo_nav)/launch/landmark_tf.launch" />
+	<include file="$(find leo_nav)/launch/wayopint_tf.launch" />
+	<include file="$(find leo_nav)/launch/twist_mux.launch" />
+
+
 </launch>

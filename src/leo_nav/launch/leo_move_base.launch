@@ -1,7 +1,8 @@
+<!--tis a launch file-->
 <launch>
   <remap from="odom" to="odometry/filtered"/>
 	<remap from="map" to="/rtabmap/grid_map"/>
-
+    <remap from="cmd_vel" to="nav_cmd_vel"/>
   <node name="move_base"
         pkg="move_base"
         type="move_base"
@@ -27,4 +28,5 @@
     <rosparam command="load"
               file="$(find leo_nav)/config/move_base/planners/global_planner.yaml"/>
   </node>
+
 </launch>
