@@ -1,0 +1,9 @@
+<!--tis a launch file-->
+<launch>
+	<arg name="wp_poses_file_name" default="wp_poses.yaml"/>
+
+	<node pkg="leo_nav" type="waypoint_transform_broadcaster.py" name="tf_world2wp_broadcaster" output="screen">
+	<param name="wp_poses_param_path" value="$(find leo_nav)/config/waypoints/$(arg wp_poses_file_name)"/>
+	</node>
+
+</launch>

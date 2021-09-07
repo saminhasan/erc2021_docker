@@ -1,0 +1,6 @@
+<!--tis a launch file-->
+<launch>
+
+	<node name="mode_mng" pkg="leo_nav" type="mode_manager_terminal.py" output="screen">
+	</node>
+</launch>

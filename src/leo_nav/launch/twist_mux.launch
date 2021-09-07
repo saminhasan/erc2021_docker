@@ -1,0 +1,9 @@
+<!--tis a launch file-->
+<launch>
+	<arg name="cmd_vel_out" default="cmd_vel"/>
+	<node name="twist_mux" pkg="twist_mux" type="twist_mux">
+		<remap from="cmd_vel_out" to="$(arg cmd_vel_out)"/>
+		<rosparam command="load" file="$(find leo_nav)/config/twist_mux/topics.yaml"/>
+		<rosparam command="load" file="$(find leo_nav)/config/twist_mux/locks.yaml"/>
+	</node>
+</launch>

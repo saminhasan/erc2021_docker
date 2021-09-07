@@ -1,0 +1,8 @@
+<!--tis a launch file-->
+<launch> 
+
+  <include file="$(find leo_erc_gazebo)/launch/leo_marsyard.launch" />
+  <include file="$(find leo_erc_viz)/launch/rviz.launch" />
+
+
+</launch>

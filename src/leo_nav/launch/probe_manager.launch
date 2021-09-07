@@ -1,0 +1,6 @@
+<!--tis a launch file-->
+<launch>
+
+	<node name="prb_mng" pkg="leo_nav" type="probe_manager_terminal.py" output="screen">
+	</node>
+</launch>

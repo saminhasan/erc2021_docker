@@ -1,0 +1,8 @@
+<!--tis a launch file-->
+<launch>
+	<arg name="wp_poses_file_name" default="wp_poses.yaml"/>
+
+	<node pkg="leo_nav" type="mv_base_seq.py" name="move_base_seq" output="screen">
+	<param name="wp_poses_param_path" value="$(find leo_nav)/config/waypoints/$(arg wp_poses_file_name)"/>
+	</node>
+</launch>
